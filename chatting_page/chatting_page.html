@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <div class="max-w-md mx-auto mt-10 border rounded-lg shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                <div class="ml-3">
+                    <div class="flex items-center">
+                        <span class="font-bold">Gary</span>
+                        <span class="ml-1 text-green-500">🌱</span>
+                    </div>
+                    <span class="text-sm text-green-500">Online</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="w-6 h-6 bg-gray-300 rounded-full"></button>
+                <button class="w-6 h-6 bg-gray-300 rounded-full"></button>
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="flex items-center mb-4">
+                <div class="w-16 h-16 bg-gray-300 rounded"></div>
+                <div class="ml-4">
+                    <div class="text-[#462020]">Selling Wh-1000xm5 Silver color.</div>
+                    <div class="font-bold text-[#462020]">£53</div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-start">
+                    <div class="max-w-xs p-2 bg-[#D9D9D9] rounded-lg">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div class="max-w-xs p-2 bg-[#00D300] rounded-lg text-white">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="flex justify-start">
+                    <div class="max-w-xs p-2 bg-[#D9D9D9] rounded-lg">
+                        <p>consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div class="max-w-xs p-2 bg-[#00D300] rounded-lg text-white">
+                        <p>consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center p-4 border-t">
+            <input type="text" placeholder="Write your message" class="flex-1 p-2 border rounded-lg focus:outline-none">
+            <button class="ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-6.586 6.586a1 1 0 01-1.414-1.414l6.586-6.586a1 1 0 011.414 1.414z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h3m-3 0a3 3 0 00-3-3m3 3a3 3 0 013 3m-3-3v3m0-3a3 3 0 00-3-3m3 3a3 3 0 013 3m-3-3v3" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

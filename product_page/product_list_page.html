@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-custom {
+            color: #462020;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <div class="max-w-md mx-auto">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-4 border-b">
+            <div class="relative">
+                <button id="areaButton" class="text-lg font-semibold text-custom">Manchester Area ▼</button>
+                <div id="areaMenu" class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden">
+                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100">Oxford Area</button>
+                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100">Cambridge Area</button>
+                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100">Leeds Area</button>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <button class="text-xl">🔍</button>
+                <button class="text-xl">☰</button>
+                <button class="text-xl">🔔</button>
+            </div>
+        </div>
+
+        <!-- Product List -->
+        <div class="p-4 space-y-4">
+            <!-- Product Item -->
+            <div class="flex items-center border-b pb-4">
+                <img src="https://source.unsplash.com/random/80x80" alt="Product" class="w-20 h-20 rounded">
+                <div class="ml-4 flex-1">
+                    <div class="text-custom font-semibold">Airpods2</div>
+                    <div class="text-sm text-gray-500">University area • 3 days ago</div>
+                    <div class="text-custom font-bold">£ 45</div>
+                </div>
+                <div class="flex flex-col items-end">
+                    <div class="text-custom">Student</div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <span>💬 0</span>
+                        <span>❤️ 11</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar blocks for more products -->
+            <!-- Example of another product -->
+            <div class="flex items-center border-b pb-4">
+                <img src="https://source.unsplash.com/random/80x80" alt="Product" class="w-20 h-20 rounded">
+                <div class="ml-4 flex-1">
+                    <div class="text-custom font-semibold">BYREDO 50ml</div>
+                    <div class="text-sm text-gray-500">University area • 25sec ago</div>
+                    <div class="text-custom font-bold">£ 58</div>
+                </div>
+                <div class="flex flex-col items-end">
+                    <div class="text-custom">Student</div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <span>💬 1</span>
+                        <span>❤️ 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more products as needed -->
+        </div>
+
+        <!-- Floating Action Button -->
+        <button class="fixed bottom-20 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg">+</button>
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white border-t">
+            <div class="flex justify-around p-2">
+                <button class="flex flex-col items-center text-custom">
+                    <span>🏠</span>
+                    <span class="text-xs">Home</span>
+                </button>
+                <button class="flex flex-col items-center text-gray-500">
+                    <span>🌍</span>
+                    <span class="text-xs">Surround</span>
+                </button>
+                <button class="flex flex-col items-center text-gray-500">
+                    <span>💬</span>
+                    <span class="text-xs">Chat</span>
+                </button>
+                <button class="flex flex-col items-center text-gray-500">
+                    <span>👤</span>
+                    <span class="text-xs">Profile</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        document.getElementById('areaButton').addEventListener('click', () => {
+            const menu = document.getElementById('areaMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#areaMenu button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                document.getElementById('areaButton').textContent = e.target.textContent + ' ▼';
+                document.getElementById('areaMenu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
